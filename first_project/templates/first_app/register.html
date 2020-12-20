@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html'%}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Register Here!!</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ userform.as_p }}
+    {{ userprofile.as_p }}
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </form>
+    </div>
+</div>
+{% endblock %}

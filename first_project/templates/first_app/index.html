@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html'%}
+{% block body_block %}
+    <div class="container">
+      <div class="jumbotron">
+        {% if registered %}
+        <h1>Thank you for registering. Now please Login</h1>
+        {% else %}
+      <h1>Welcome to Leiten. Please Login or Register</h1>
+      {% endif %}
+      </div>
+    </div>
+{% endblock %}
